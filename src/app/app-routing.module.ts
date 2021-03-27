@@ -1,3 +1,4 @@
+import { MainPageComponent } from './components/main-page/main-page.component';
 import { LoginComponent } from './components/login/login.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -6,12 +7,16 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'portal',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
   {
-    path: 'portal',
+    path: 'login',
     component: LoginComponent
+  },
+  {
+    path: 'main',
+    component: MainPageComponent
   },
 ];
 
