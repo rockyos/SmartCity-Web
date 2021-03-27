@@ -1,1 +1,13 @@
-<iframe src="https://deputat.kremen.dev" width="100%" height="100%" scrolling="auto"> </iframe>
+<div class="container">
+    <form action="">
+        <div class="form-group">
+            <label class="form-control-label"> Тип проблемы </label>
+            <ng-select id="simple-ng-select" placeholder="Выберете тип проблемы" [clearable]="false" [dropdownPosition]="'bottom'" class="required" [items]="timeItems" bindValue="value" [searchable]="false" bindLabel="text" formControlName="problemsType" [multiple]="true"
+                required>
+            </ng-select>
+        </div>
+    </form>
+</div>
+
+
+<iframe #myIframe src="https://deputat.kremen.dev" width="100%" height="100%" scrolling="auto" (load)="onLoad(myIframe)"> </iframe>
